@@ -1,21 +1,45 @@
 #include<stdio.h>
-void TU(int n)
+float TU(float n)
 {
     float a;
     a=n*0.0324;
-    printf("%d TWD = %.2f USD\n",n,a);
+    return a;
 }
-void TE(int n)
+float TE(float n)
 {
     float a;
     a=n*0.0285;
-    printf("%d TWD = %.2f EUR\n",n,a);
+    return a;
+}
+float UT(float n)
+{
+    float a;
+    a=n*30.805;
+    return a;
+}
+float UE(float n)
+{
+    float a;
+    a=n*0.88;
+    return a;
+}
+float ET(float n)
+{
+    float a;
+    a=n*34.83;
+    return a;
+}
+float EU(float n)
+{
+    float a;
+    a=n*1.14;
+    return a;
 }
 int main()
 {
     int choice;
     int choice2;
-    int n;
+    float n;
     while(1)
     {
         printf("1.TWD\n");
@@ -37,15 +61,16 @@ int main()
                 break;
             case 2:
                 printf("Enter n:");
-                scanf("%d",&n);
-                TU(n);
+                scanf("%f",&n);
+                printf("%.2f TWD = %.2f USD\n",n,TU(n));
                 break;
             case 3:
                 printf("Enter n:");
-                scanf("%d",&n);
-                TE(n);
+                scanf("%f",&n);
+                printf("%.2f TWD = %.2f EUR\n",n,TE(n));
                 break;
             }
+            break;
         case 2:
             if(choice2==4)
                 break;
@@ -53,13 +78,39 @@ int main()
             {
             case 1:
                 printf("Enter n:");
-                scanf("%d",&n);
+                scanf("%f",&n);
+                printf("%.2f USD = %.2f TWD\n",n,UT(n));
+                break;
+            case 2:
+                break;
+            case 3:
+                printf("Enter n:");
+                scanf("%f",&n);
+                printf("%.2f USD = %.2f EUR\n",n,UE(n));
+                break;
+            }
+        case 3:
+            if(choice2==4)
+                break;
+            switch(choice2)
+            {
+            case 1:
+                printf("Enter n:");
+                scanf("%f",&n);
+                printf("%.2f EUR = %.2f TWD\n",n,ET(n));
                 break;
             case 2:
                 printf("Enter n:");
-                scanf("%d",&n);
+                scanf("%f",&n);
+                printf("%.2f EUR = %.2f USD\n",n,EU(n));
+                break;
+            case 3:
                 break;
             }
+
+
         }
+
     }
+
 }
