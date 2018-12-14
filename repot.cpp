@@ -89,6 +89,7 @@ int main()
                 printf("%.2f USD = %.2f EUR\n",n,UE(n));
                 break;
             }
+            break;
         case 3:
             if(choice2==4)
                 break;
@@ -107,10 +108,7 @@ int main()
             case 3:
                 break;
             }
-
-
+            break;
         }
-
     }
-
 }
